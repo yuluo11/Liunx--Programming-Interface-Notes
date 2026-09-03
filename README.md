@@ -8,7 +8,8 @@
 ```
     int reboot(int magic,int magic2,int cmd,void *arg)
 ```
-magic必须等于LINUX_REBOOT_MAGIC1(16进制为0xfee1dead，很有意思哈)
+magic必须等于LINUX_REBOOT_MAGIC1(16进制为0xfee1dead，很有意思哈)  
+
 magic2必须等于LINUX_REBOOT_MAGIC2A(16进制为0x05121996,算是一个彩蛋，它有四个合法值，这个就是其中之一linus大女儿的生日)
 
 ## CH4
