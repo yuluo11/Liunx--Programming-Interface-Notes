@@ -22,6 +22,10 @@ magic2必须等于LINUX_REBOOT_MAGIC2A(16进制为0x05121996,算是一个彩蛋�
 ```
 后面会有一个getopt里面的全局变量optind(option index),optind会指向第一个非选项参数(例如你传入的文件名)后面就是前面说的open(),read(),write().
 
+###4.2：
+有点没看懂....
+
+
 
 
 
