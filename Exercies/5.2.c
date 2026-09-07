@@ -3,9 +3,9 @@
 #include<sys/stat.h>
 int main(int argc,char *argv[]){
     int fd;
-    if(argc!=2||strcmp(argv[1],"--help")==0){
+    if(argc!=2||strcmp(argv[1],"--help")==0)
         usageErr("%s file\n",argv[0]);
-    }
+
     fd=open(argv[1],O_WRONLY|O_APPEND);
     if(fd==-1)
         errExit("open");
