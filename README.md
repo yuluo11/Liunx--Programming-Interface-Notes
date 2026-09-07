@@ -31,10 +31,10 @@ while((int opt=getopt(argc,argv,"a"))!=-1)
 ### [5.2代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/Exercies/5.2.c):
 虽然lseek将游标设置为零，但是write依然受O_APPEND的控制，从文件末尾开始写入数据
 
-### [5.3代码]():
+### [5.3代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/5.3.c):
 没啥好说的.
 
-### [5.4代码]():
+### [5.4代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/5.4.c):
 感觉这几个题目都在讲系统调用的原子性
 
 ### 5.5:
@@ -43,7 +43,8 @@ while((int opt=getopt(argc,argv,"a"))!=-1)
 ### 5.6:
 输出是 Gidday world,因为共享游标后面的在就是fd3又是独立的open()所以offset一直在0-6,改动也一在0-6,后面world不变，即位Gidday world
 
-### [5.7代码]():
+### [5.7代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/5.7.c):
+整体的思路就是遍历数组得到数据长度，然后malloc动态分配内存，然后write/read一次性写入/读取，用memcpy把各个小缓冲区的内容按顺序拷进内存，当然值得注意的是这里还要考虑到写入或者奋发时的off_set最后就是free，这里read相对复杂一些
 
 
 
