@@ -25,6 +25,9 @@ while((int opt=getopt(argc,argv,"a"))!=-1)
 ### 4.2：
 有点没看懂....
 
+## CH5:
+整体来讲，感觉围绕原子操作在讲，然后就算文件描述符（fd）.
+
 ### 5.1:
 现在电脑是64位，不好去测试,代码就不写了（
 
@@ -46,8 +49,70 @@ while((int opt=getopt(argc,argv,"a"))!=-1)
 ### [5.7代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/Exercies/5.7.c):
 整体的思路就是遍历数组得到数据长度，然后malloc动态分配内存，然后write/read一次性写入/读取，用memcpy把各个小缓冲区的内容按顺序拷进内存，当然值得注意的是这里还要考虑到写入或者分发时的off_set最后就是free，这里read相对复杂一些
 
+## CH15
+说是文件属性，不过我觉得大部分内容是在讲权限的内容
 
+### 15.1:
+这里就不做展示了
+a和b就略了.
+c
+```
+                        目录     文件
+创建文件:                  wx       -
+打开读：                   x        r
+打开写：                   x        w
+删除文件：                 wx       -
+重命名：                   wx       -
+重命名存在：               wx       -    （会覆盖）
 
+```
+
+设置 sticky 位后，删除或重命名目录中的文件时，通常只有以下用户可以操作：
+1. 文件所有者
+2. 目录所有者
+3. root 或具有相应特权的用户
+
+### 15.2
+不会，我们是通过stat获取信息，如果改了就没有意义了
+
+### 15.3
+只是将
+```
+printf("Last file access:         %s", ctime(&sb->st_atime));
+printf("Last file modification:   %s", ctime(&sb->st_mtime));
+printf("Last status change:       %s", ctime(&sb->st_ctime));
+
+```
+改为
+```
+printf("Last file access:         %.24s.%09ld\n",
+       ctime(&sb->st_atime), sb->st_atim.tv_nsec);
+
+printf("Last file modification:   %.24s.%09ld\n",
+       ctime(&sb->st_mtime), sb->st_mtim.tv_nsec);
+
+printf("Last status change:       %.24s.%09ld\n",
+       ctime(&sb->st_ctime), sb->st_ctim.tv_nsec);
+
+```
+这里就不具体写代码了
+
+### 15.4
+等学完前面进程再来补
+
+### 15.5
+```
+mode_t oldMask;
+
+oldMask = umask(0);     /* 取得旧值，同时暂时将 umask 设置为 0 */
+umask(oldMask);         /* 恢复原来的 umask */
+
+```
+
+### 15.6代码
+
+### 15.7代码
+rwx 这些是对于用户组其他 i-node标志对于的是文件本身的权限
 
 
 
