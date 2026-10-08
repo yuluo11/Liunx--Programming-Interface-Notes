@@ -47,7 +47,6 @@ static int walk(const char *path,walk_fn fn, int flags,int level)
         }
     }
 
-        
     struct dirent *entry;
         while((entry=readdir(dir))!=NULL){
             struct stat st;

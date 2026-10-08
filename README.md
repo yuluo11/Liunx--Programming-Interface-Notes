@@ -123,5 +123,21 @@ readdir_r()在现代已被废弃
 ### 18.2
 说实话查了半天资料也没有搞懂个所以然
 
+### [18.3代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/Exercies/18.3.c)
+
 ### 18.4
 这个现代已经淘汰了，就不想写了
+
+### [18.5代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/Exercies/18.5.c)
+写的有点吃力
+
+### 18.6
+这里就不修改了()
+
+### [18.7代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/Exercies/18.7.c)
+
+### [18.8代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/Exercies/18.8.c)
+这个有点恶心，要考虑的东西有点多，一开始想的太复杂
+
+### 18.9
+我是按板块来学，后面看看补完前面的再来解决这个问题
