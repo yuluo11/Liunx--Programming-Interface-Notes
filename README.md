@@ -1,6 +1,9 @@
 # Linux 系统编程手册学习note
 参考:[man手册](https://man7.org/linux/man-pages/)
 
+# 实现了部分功能的ls
+算是对文件的整理和复习小任务
+
 ## CH2-3
 主要讲基本概念和系统调用，里面的为所有程序所使用的错误处理函数有点看不懂
 
@@ -109,9 +112,9 @@ umask(oldMask);         /* 恢复原来的 umask */
 
 ```
 
-### 15.6代码
+### [15.6代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/Exercies/15.6.c)
 
-### 15.7代码
+### [15.7代码](https://github.com/yuluo11/Liunx--Programming-Interface-Notes/blob/main/Exercies/15.7.c)
 rwx 这些是对于用户组其他 i-node标志对于的是文件本身的权限
 
 ## CH18
